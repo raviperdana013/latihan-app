@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/wilayah', \Api\WilayahController::class, ['index']);
+Route::apiResource('/wilayah', WilayahController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
